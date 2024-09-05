@@ -1,0 +1,58 @@
+/* src/components/NoteList.css */
+
+/* Basic container styling */
+.note-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows notes to wrap onto new lines */
+    gap: 16px; /* Space between notes */
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Note card styling (assuming Note component styles are in a similar file) */
+  .note {
+    flex: 1 1 calc(33.333% - 32px); /* Three columns with gaps considered */
+    box-sizing: border-box;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .note {
+      flex: 1 1 calc(50% - 32px); /* Two columns for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .note {
+      flex: 1 1 100%; /* Single column for small screens */
+    }
+  }
+
+  
+  /* src/components/Note.css */
+
+.note {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .note:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Adjustments for responsive design */
+  @media (max-width: 768px) {
+    .note {
+      padding: 12px;
+    }
+  }
+  
